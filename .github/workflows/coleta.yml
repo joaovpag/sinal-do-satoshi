@@ -1,0 +1,69 @@
+name: Coleta
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      testar_fontes:
+        description: "Rodar também o teste das fontes"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths: ["src/**", "scripts/**", ".github/workflows/coleta.yml"]
+
+permissions:
+  contents: write
+  actions: write
+
+# Uma execução por vez, para duas não brigarem pelo ramo de dados
+concurrency:
+  group: dados
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      DATA_DIR: dados
+      GH_TOKEN: ${{ github.token }}
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Preparar ramo de dados
+        run: bash scripts/preparar_dados.sh
+
+      - name: Testar fontes
+        if: github.event_name == 'push' || inputs.testar_fontes
+        run: python -m src.testar_fontes
+
+      - name: Baixar histórico longo (só na primeira vez)
+        run: |
+          if [ ! -f dados/.historico_ok.json ]; then
+            python -m src.baixar_historico
+          else
+            echo "Histórico longo já baixado."
+          fi
+
+      - name: Coletar
+        run: python -m src.coletar
+
+      - name: Salvar dados
+        if: always()
+        run: bash scripts/salvar_dados.sh "coleta"
+
+      # O GitHub desliga agendamentos de repositórios públicos parados há 60 dias.
+      # Reativar o próprio workflow uma vez por dia evita isso.
+      - name: Manter agendamento vivo
+        if: github.event_name == 'schedule'
+        run: |
+          if [ "$(date -u +%H)" = "00" ] && [ "$(date -u +%M)" -lt 15 ]; then
+            gh api -X PUT "repos/${{ github.repository }}/actions/workflows/coleta.yml/enable" || true
+          fi
