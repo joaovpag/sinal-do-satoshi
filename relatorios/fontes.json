@@ -1,15 +1,15 @@
 {
-  "testado_em": "2026-10-25T23:55:20Z",
+  "testado_em": "2026-10-26T00:01:40Z",
   "resultados": [
     {
       "teste": "coinbase preço 15m (últimas 3h)",
       "ok": true,
       "detalhe": {
         "velas": 12,
-        "primeira": "2026-10-25T21:00:00Z",
-        "ultima": "2026-10-25T23:45:00Z"
+        "primeira": "2026-10-25T21:15:00Z",
+        "ultima": "2026-10-26T00:00:00Z"
       },
-      "segundos": 0.34
+      "segundos": 0.31
     },
     {
       "teste": "coinbase preço 1d (2015)",
@@ -19,91 +19,91 @@
         "primeira": "2015-07-20T00:00:00Z",
         "ultima": "2016-02-05T00:00:00Z"
       },
-      "segundos": 0.26
+      "segundos": 0.27
     },
     {
       "teste": "kraken preço 15m",
       "ok": true,
       "detalhe": {
         "velas": 12,
-        "primeira": "2026-10-25T21:00:00Z",
-        "ultima": "2026-10-25T23:45:00Z"
+        "primeira": "2026-10-25T21:15:00Z",
+        "ultima": "2026-10-26T00:00:00Z"
       },
-      "segundos": 0.19
+      "segundos": 0.21
     },
     {
       "teste": "kraken preço 1d (profundidade)",
       "ok": true,
       "detalhe": {
         "velas": 721,
-        "primeira": "2024-11-04T00:00:00Z",
-        "ultima": "2026-10-25T00:00:00Z"
+        "primeira": "2024-11-05T00:00:00Z",
+        "ultima": "2026-10-26T00:00:00Z"
       },
-      "segundos": 0.2
+      "segundos": 0.25
     },
     {
       "teste": "okx funding + open interest",
       "ok": true,
       "detalhe": {
-        "ts": "2026-10-25T23:45:00Z",
-        "ts_unix": 1792971900,
+        "ts": "2026-10-26T00:00:00Z",
+        "ts_unix": 1792972800,
         "fonte": "okx",
-        "funding_8h": 7.0306e-05,
-        "funding_bruto": 7.03060095796e-05,
+        "funding_8h": 6.84074e-05,
+        "funding_bruto": 6.84073912844e-05,
         "intervalo_h": 8,
-        "oi_btc": 29817.202900000124,
-        "oi_usd": 2386363181.416,
-        "preco_mark": 80066.9
+        "oi_btc": 29888.16490000012,
+        "oi_usd": 2394412621.73477,
+        "preco_mark": 80116.6
       },
-      "segundos": 0.72
+      "segundos": 0.65
     },
     {
       "teste": "bybit funding + open interest",
       "ok": false,
       "detalhe": "ErroFonte: HTTP 403: {\n    error:The Amazon CloudFront distribution is configured to block access from your country\n}",
-      "segundos": 0.11
+      "segundos": 0.1
     },
     {
       "teste": "deribit funding + open interest",
       "ok": true,
       "detalhe": {
-        "ts": "2026-10-25T23:45:00Z",
-        "ts_unix": 1792971900,
+        "ts": "2026-10-26T00:00:00Z",
+        "ts_unix": 1792972800,
         "fonte": "deribit",
-        "funding_8h": 1.7e-05,
-        "funding_bruto": 1.7e-05,
+        "funding_8h": 1.719e-05,
+        "funding_bruto": 1.719e-05,
         "intervalo_h": 8,
-        "oi_btc": 10460.356077946612,
-        "oi_usd": 837074200.0,
-        "preco_mark": 80023.49
+        "oi_btc": 10455.165407520952,
+        "oi_usd": 837105260.0,
+        "preco_mark": 80066.19
       },
-      "segundos": 0.17
+      "segundos": 0.18
     },
     {
       "teste": "hyperliquid funding + open interest",
       "ok": true,
       "detalhe": {
-        "ts": "2026-10-25T23:45:00Z",
-        "ts_unix": 1792971900,
+        "ts": "2026-10-26T00:00:00Z",
+        "ts_unix": 1792972800,
         "fonte": "hyperliquid",
-        "funding_8h": 2.40952e-05,
-        "funding_bruto": 3.0119e-06,
+        "funding_8h": 5.0436e-05,
+        "funding_bruto": 6.3045e-06,
         "intervalo_h": 1,
-        "oi_btc": 42648.72454,
-        "oi_usd": 3413817155.8043003,
-        "preco_mark": 80045.0
+        "oi_btc": 42467.64598,
+        "oi_usd": 3402040651.81182,
+        "preco_mark": 80109.0
       },
-      "segundos": 0.27
+      "segundos": 0.28
     },
     {
       "teste": "okx histórico de funding",
       "ok": true,
       "detalhe": {
-        "registros": 292,
+        "registros": 293,
         "mais_antigo": "2026-07-20T16:00:00Z",
-        "mais_recente": "2026-10-25T16:00:00Z"
+        "mais_recente": "2026-10-26T00:00:00Z"
       },
-      "segundos": 1.62
+      "segundos": 1.6
     },
     {
       "teste": "bybit histórico de funding",
@@ -119,7 +119,7 @@
         "mais_antigo": null,
         "mais_recente": null
       },
-      "segundos": 0.8
+      "segundos": 11.39
     },
     {
       "teste": "hyperliquid histórico de funding",
@@ -129,7 +129,7 @@
         "mais_antigo": "2023-05-12T00:00:00Z",
         "mais_recente": "2023-06-25T10:00:00Z"
       },
-      "segundos": 0.56
+      "segundos": 0.51
     },
     {
       "teste": "onde roda o servidor",
@@ -139,7 +139,7 @@
         "country": "US",
         "org": "AS8075 Microsoft Corporation"
       },
-      "segundos": 0.14
+      "segundos": 0.12
     }
   ]
 }
