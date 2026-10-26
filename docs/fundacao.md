@@ -143,13 +143,36 @@ Se uma execução atrasar ou não acontecer, a próxima completa as velas que fa
 
 ---
 
-## 10. Andamento
+## 10. Resultado do teste das fontes (25/10/2026)
+
+Servidor do GitHub Actions: Iowa, EUA (Microsoft).
+
+| Fonte | Funciona? | Observação |
+|---|---|---|
+| Coinbase preço | ✅ | Histórico desde 20/07/2015 em 1d, 1h e 15m |
+| Kraken preço (reserva) | ✅ | Só as últimas 720 velas; serve para cobrir falhas curtas |
+| OKX funding + open interest | ✅ | Histórico de funding de só ~3 meses |
+| Deribit funding + open interest | ✅ | Histórico de funding desde 30/04/2019 (de hora em hora) |
+| Hyperliquid funding + open interest | ✅ | Histórico de funding desde 12/05/2023 (de hora em hora) |
+| Bybit | ❌ | Bloqueia servidores dos EUA (HTTP 403). Removida da coleta |
+
+Histórico baixado na primeira execução (5 minutos, 22 MB):
+- Preço diário: 4.116 dias, sem lacunas.
+- Preço 1h: 98.708 velas desde 2015; 21 lacunas pequenas (a maior com 15h, em 2018).
+- Preço 15m: 70.029 velas (2 anos); 3 lacunas, a maior com ~6h em 08/05/2026. São períodos sem negociação registrada na Coinbase, não erro da coleta.
+- Funding: 65.652 registros da Deribit, 29.743 da Hyperliquid e 292 da OKX.
+
+Conclusão: o histórico de funding da Deribit (7 anos) resolve a preocupação de "pouco histórico grátis" para derivativos. Open interest histórico continua só daqui para frente.
+
+---
+
+## 11. Andamento
 
 - [x] Passo 1–2: repositório `joaovpag/sinal-do-satoshi` criado e conectado (25/10/2026).
 - [x] Passo 4: coletores, histórico e `signal.json` provisório escritos, com testes sem internet.
 - [x] Passo 6–7: agendamento de 15 min e download do histórico longo já configurados no workflow.
-- [ ] Passo 3: teste das fontes rodando no GitHub (automático no primeiro push).
-- [ ] Passo 5: conferir os CSVs da primeira execução.
+- [x] Passo 3: teste das fontes no GitHub (seção 10).
+- [x] Passo 5: CSVs da primeira execução conferidos; `signal.json` publicado.
 - [ ] Passo 8: GitHub Pages. Enquanto isso, o `signal.json` fica em
   `https://raw.githubusercontent.com/joaovpag/sinal-do-satoshi/dados/signal.json`.
 - [ ] Passo 9–10: observar 7 dias.

@@ -89,14 +89,14 @@ Métricas secundárias: precisão de cada sinal, drawdown máximo de uma estrat�
 | Família | Exemplos de dado | Fontes candidatas |
 |---|---|---|
 | Preço e volume | OHLCV em 15m, 1h, 1d | Coinbase, Kraken, OKX (APIs públicas) |
-| Derivativos | Funding rate, open interest, liquidações, long/short | APIs públicas de OKX, Bybit, Deribit |
+| Derivativos | Funding rate, open interest, liquidações, long/short | OKX, Deribit, Hyperliquid (testadas ✅). Bybit bloqueada nos EUA ❌ |
 | On-chain | Fluxo para exchanges, MVRV, endereços ativos, hashrate, taxas | CoinMetrics Community, mempool.space, blockchain.com |
 | Macro | DXY, juros dos EUA, S&P 500, Nasdaq, ouro | FRED (API gratuita), Yahoo Finance |
 | ETFs | Fluxo diário dos ETFs de BTC | Páginas públicas de fluxo (coleta diária) |
 | Sentimento | Fear & Greed, volume de buscas | alternative.me, Google Trends |
 | Notícias | Manchetes cripto e macro | RSS de portais + IA gratuita para classificar |
 
-Atenção: a Binance bloqueia acesso de servidores nos EUA, onde normalmente rodam as máquinas gratuitas de nuvem. Por isso as fontes primárias são outras exchanges.
+Atenção: Binance e Bybit bloqueiam servidores nos EUA, onde roda o GitHub Actions (confirmado: Iowa). Por isso as fontes são outras corretoras.
 
 ---
 

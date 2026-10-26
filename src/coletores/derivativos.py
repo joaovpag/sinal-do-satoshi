@@ -72,7 +72,9 @@ def hyperliquid(slot):
     return _linha("hyperliquid", slot, c["funding"], 1, c["openInterest"], c["markPx"])
 
 
-FONTES = [("okx", okx), ("bybit", bybit), ("deribit", deribit), ("hyperliquid", hyperliquid)]
+# Bybit fica de fora: bloqueia servidores dos EUA (HTTP 403, testado em 25/10/2026).
+# O código continua aqui caso um dia a coleta rode de outro país.
+FONTES = [("okx", okx), ("deribit", deribit), ("hyperliquid", hyperliquid)]
 
 
 def coletar(agora):
@@ -183,4 +185,4 @@ def hist_hyperliquid(inicio_ms=1672531200000, max_paginas=200):
     return _com_intervalo("hyperliquid", pares, intervalo_fixo=1)
 
 
-HISTORICOS = [("okx", hist_okx), ("bybit", hist_bybit), ("deribit", hist_deribit), ("hyperliquid", hist_hyperliquid)]
+HISTORICOS = [("okx", hist_okx), ("deribit", hist_deribit), ("hyperliquid", hist_hyperliquid)]
