@@ -1,0 +1,41 @@
+{
+  "inicio": "2026-10-25T23:55:26Z",
+  "preco": {
+    "1d": {
+      "novas": 4115,
+      "fonte": "coinbase",
+      "erros": [],
+      "segundos": 4
+    },
+    "1h": {
+      "novas": 98707,
+      "fonte": "coinbase",
+      "erros": [],
+      "segundos": 89
+    },
+    "15m": {
+      "novas": 70028,
+      "fonte": "coinbase",
+      "erros": [],
+      "segundos": 62
+    }
+  },
+  "funding": {
+    "okx": {
+      "linhas": 292,
+      "desde": "2026-07-20T16:00:00Z"
+    },
+    "bybit": {
+      "erro": "ErroFonte: HTTP 403: {\n    error:The Amazon CloudFront distribution is configured to block access from your country\n}"
+    },
+    "deribit": {
+      "linhas": 65652,
+      "desde": "2019-04-30T10:00:00Z"
+    },
+    "hyperliquid": {
+      "linhas": 29743,
+      "desde": "2023-05-12T00:00:00Z"
+    }
+  },
+  "fim": "2026-10-26T00:00:26Z"
+}

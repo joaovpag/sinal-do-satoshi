@@ -1,0 +1,7 @@
+ts,fonte,tipo,erro
+2026-10-25T23:55:26Z,bybit,funding_hist,"HTTP 403: {
+    error:The Amazon CloudFront distribution is configured to block access from your country
+}"
+2026-10-26T00:00:26Z,bybit,derivativos,"ErroFonte: HTTP 403: {
+    error:The Amazon CloudFront distribution is configured to block access from your country
+}"
