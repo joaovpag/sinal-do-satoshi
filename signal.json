@@ -1,12 +1,12 @@
 {
   "versao": "0.1-fundacao",
   "status": "em_teste",
-  "atualizado_em": "2026-10-29T18:11:41Z",
-  "preco_usd": 80798.49,
+  "atualizado_em": "2026-10-29T18:57:48Z",
+  "preco_usd": 80608.17,
   "preco_fonte": "coinbase",
-  "ultima_vela_15m": "2026-10-29T17:45:00Z",
-  "atraso_dados_min": 27,
-  "variacao_24h_pct": 0.04,
+  "ultima_vela_15m": "2026-10-29T18:30:00Z",
+  "atraso_dados_min": 28,
+  "variacao_24h_pct": -0.6,
   "regime": null,
   "sinais": {
     "curto": {
@@ -35,30 +35,30 @@
     "por_fonte": {
       "okx": {
         "funding_8h": 0.0001,
-        "oi_btc": 30722.054400000106,
-        "oi_usd": 2482489461.381129
+        "oi_btc": 30703.897700000107,
+        "oi_usd": 2482446973.7222486
       },
       "deribit": {
-        "funding_8h": 5.534e-05,
-        "oi_btc": 8981.6911728654,
-        "oi_usd": 725414910.0
+        "funding_8h": 6.254e-05,
+        "oi_btc": 9011.966660078613,
+        "oi_usd": 728192410.0
       },
       "hyperliquid": {
         "funding_8h": 0.0001,
-        "oi_btc": 42541.06804,
-        "oi_usd": 3437701167.24436
+        "oi_btc": 42294.22018,
+        "oi_usd": 3419868349.53462
       }
     },
-    "funding_8h_medio": 8.511e-05,
-    "oi_btc_total": 82244.81
+    "funding_8h_medio": 8.751e-05,
+    "oi_btc_total": 82010.08
   },
   "placar": null,
   "fontes_fora_do_ar": [],
   "execucao": {
-    "duracao_s": 2.3,
+    "duracao_s": 1.5,
     "velas_novas": {
       "15m": 3,
-      "1h": 1,
+      "1h": 0,
       "1d": 0
     }
   }
