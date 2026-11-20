@@ -6,3 +6,4 @@ ts,fonte,tipo,erro
     error:The Amazon CloudFront distribution is configured to block access from your country
 }"
 2026-11-20T19:49:56Z,deribit,derivativos,"ErroFonte: HTTP 502: {""type"":""https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-502/"",""title"":""Error 502: Bad gateway"",""status"":502,""detail"":""The origin web server ret"
+2026-11-20T20:38:52Z,deribit,derivativos,"ErroFonte: HTTP 503: {""jsonrpc"":""2.0"",""error"":{""message"":""system_maintenance"",""code"":11051}}"
